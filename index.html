@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<form id="form">
+  <label>Name</label>
+  <input type="text" id="name">
+
+  <label>Age</label>
+  <input type="number" id="age">
+
+  <label>Gender</label>
+  <input type="radio" name="gender" value="Male" class="inline">Male
+  <input type="radio" name="gender" value="Female" class="inline">Female
+  <input type="radio" name="gender" value="Other" class="inline">Other
+
+  <label>Country</label>
+  <select id="country">
+    <option value="">Select</option>
+    <option>India</option>
+    <option>USA</option>
+    <option>Japan</option>
+    <option>China</option>
+  </select>
+
+  <label>Technological Stack</label>
+  <input type="checkbox" value="HTML" class="tech inline">HTML
+  <input type="checkbox" value="CSS" class="tech inline">CSS
+  <input type="checkbox" value="JS" class="tech inline">JS
+  <input type="checkbox" value="React" class="tech inline">React
+  <input type="checkbox" value="React Native" class="tech inline">React Native
+
+  <label>Address</label>
+  <textarea id="address" rows="4"></textarea>
+
+  <label>Telephone</label>
+  <input type="tel" id="phone">
+
+  <label>Email</label>
+  <input type="email" id="email">
+
+  <br><br>
+  <button type="reset" id="reset">Reset</button>
+  <button type="button" id="submit" onclick="submitForm()">Submit</button>
+</form>
+
+<div id="output"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
