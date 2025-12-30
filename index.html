@@ -2,51 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Info</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<form id="form">
+<form id="form" class="form-container">
+  <div class="form-header">
+    <h1>Personal Info</h1>
+    <p class="subtitle">Update your personal details here</p>
+  </div>
+
   <label>Name</label>
-  <input type="text" id="name" placeholder="Enter your name">
+  <input type="text" id="name" placeholder="Your name">
 
-  <label>Age</label>
-  <input type="number" id="age" placeholder="Enter your age">
+  <label>Email Address</label>
+  <input type="email" id="email" placeholder="Your email address">
 
-  <label>Gender</label>
-  <input type="radio" name="gender" value="Male" class="inline">Male
-  <input type="radio" name="gender" value="Female" class="inline">Female
-  <input type="radio" name="gender" value="Other" class="inline">Other
+  <div class="form-row">
+    <div class="form-group">
+      <label>Age</label>
+      <input type="number" id="age" placeholder="Your age">
+    </div>
+    <div class="form-group">
+      <label>Phone no.</label>
+      <input type="tel" id="phone" placeholder="Your phone no.">
+    </div>
+  </div>
 
   <label>Country</label>
   <select id="country">
-    <option value="">Select</option>
+    <option value="">Your country</option>
     <option>India</option>
     <option>USA</option>
     <option>Japan</option>
     <option>China</option>
   </select>
 
-  <label>Technological Stack</label>
-  <input type="checkbox" value="HTML" class="tech inline">HTML
-  <input type="checkbox" value="CSS" class="tech inline">CSS
-  <input type="checkbox" value="JS" class="tech inline">JS
-  <input type="checkbox" value="React" class="tech inline">React
-  <input type="checkbox" value="React Native" class="tech inline">React Native
+  <label>Gender</label>
+  <div class="gender-options">
+    <label class="gender-btn">
+      <input type="radio" name="gender" value="Male">
+      <span>Male</span>
+    </label>
+    <label class="gender-btn">
+      <input type="radio" name="gender" value="Female">
+      <span>Female</span>
+    </label>
+    <label class="gender-btn">
+      <input type="radio" name="gender" value="Other">
+      <span>Other</span>
+    </label>
+  </div>
+
+  <label>Tech Stack</label>
+  <select id="techStack" class="tech-select">
+    <option value="" class="placeholder-tech">Your tech stack</option>
+    <option value="HTML">HTML</option>
+    <option value="CSS">CSS</option>
+    <option value="JavaScript">JavaScript</option>
+    <option value="React">React</option>
+    <option value="React Native">React Native</option>
+    <option value="Node.js">Node.js</option>
+    <option value="Python">Python</option>
+  </select>
 
   <label>Address</label>
-  <textarea id="address" rows="4" placeholder="Enter address"></textarea>
+  <textarea id="address" rows="4" placeholder="Your address"></textarea>
 
-  <label>Telephone</label>
-  <input type="tel" id="phone" placeholder="Your 10-digit phone number">
-
-  <label>Email</label>
-  <input type="email" id="email" placeholder="abc@gmail.com">
-
-  <br><br>
-  <button type="reset" id="reset">Reset</button>
-  <button type="button" id="submit" onclick="submitForm()">Submit</button>
+  <div class="button-group">
+    <button type="reset" class="btn-reset">Reset</button>
+    <button type="button" class="btn-submit" onclick="submitForm()">Submit</button>
+  </div>
 </form>
 
 <div id="output"></div>
