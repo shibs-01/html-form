@@ -123,7 +123,8 @@ select {
 .gender-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 12px;
   padding: 14px;
   border: 1px solid #d2d2d7;
   border-radius: 8px;
@@ -141,7 +142,11 @@ select {
 }
 
 .gender-btn input[type="radio"] {
-  display: none;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #1d1d1f;
 }
 
 .gender-btn input[type="radio"]:checked + span {
